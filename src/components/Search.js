@@ -13,7 +13,7 @@ import PauseIcon from 'material-ui/svg-icons/av/pause-circle-outline';
 
 class Search extends Component {
   componentWillMount() {
-    this.props.search(this.props.text);
+    this.search(this.props.text);
   }
 
   handleChange = (event) => {
@@ -21,7 +21,8 @@ class Search extends Component {
   };
 
   search = text => {
-    this.props.search(text);
+    if (text !== undefined && text !== '')
+      this.props.search(text);
   }
 
   componentWillReceiveProps(nextProps) {
