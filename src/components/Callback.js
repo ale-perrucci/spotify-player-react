@@ -10,8 +10,8 @@ class Callback extends React.Component {
   componentDidMount()
   {
     const params = this.getHashParams();
-    localStorage.setItem('access_token', params.access_token)
-    window.location.assign(`http://localhost:3000`);
+    localStorage.setItem('access_token', params.access_token);
+    window.location.assign(window.location.origin);
   }
 
   getHashParams() {
