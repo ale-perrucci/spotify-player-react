@@ -1,2 +1,2 @@
 export const CLIENT_ID = '02ea434676c7486a8e41dc4baf5c2260';
-export const REDIRECT_URI = `${window.location.protocol}//${window.location.host}/callback`;
+export const REDIRECT_URI = process.env.NODE_ENV === "production" ? `https://${window.location.host}/callback` : `${window.location.protocol}//${window.location.host}/callback`;
